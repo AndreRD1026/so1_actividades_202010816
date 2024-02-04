@@ -49,7 +49,7 @@ fi
 ABS_PATH=$(readlink -f "$0")
 
 # Linea para agregar al crontab.
-ADD_CRON="* * * * * $ABS_PATH"
+ADD_CRON="*/5 * * * * $ABS_PATH"
 
 # Verificando si ya existe la linea en el crontab.
 if ! crontab -l | grep -qF "$ADD_CRON" ; then
